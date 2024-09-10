@@ -1,0 +1,5 @@
+/
+|--domain : Combined Equations:
+|            LubricationEquations
+|            TextFileOutput
+|            InitialCondition: h=maximum(0.5-(0.5)*field(coordinate_x,< code=0 , tags=>)**2,0.0074999999999999997224)
