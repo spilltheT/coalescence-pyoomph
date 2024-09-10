@@ -1,0 +1,6 @@
+/
+|--domain : Combined Equations:
+|            LubricationEquations
+|            MeshFileOutput
+|            InitialCondition: h=maximum(maximum(0.5-(0.5)*dot(field(coordinate,< code=0 , tags=>)-[[-1.25],[0],[0]],field(coordinate,< code=0 , tags=>)-[[-1.25],[0],[0]]),0.5-(0.5)*dot(field(coordinate,< code=0 , tags=>)-[[1.25],[0],[0]],field(coordinate,< code=0 , tags=>)-[[1.25],[0],[0]])),0.0074999999999999997224)
+|            SpatialErrorEstimator: h
