@@ -1,0 +1,4 @@
+#ignore all kind of files
+*.*
+#except py files
+!*.py
