@@ -25,7 +25,7 @@ class DropletCoalescence(DropletSpreading):
 		self.h_center=0.2
 		self.Lx=7.5
 		self.max_refinement_level=6
-		self.plotter = PlotterTry(self)
+		# self.plotter = PlotterTry(self)
 			
 					
 	def define_problem(self):
