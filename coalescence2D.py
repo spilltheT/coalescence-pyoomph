@@ -38,11 +38,9 @@ class DropletCoalescence(DropletSpreading):
 		eqs=LubricationEquations(sigma=self.sigma,disjoining_pressure=disjoining_pressure) # equations
 		eqs+=MeshFileOutput() # output	
 		x=var("coordinate")
-		dist1=x+self.distance/2 
-		dist2=x-self.distance/2
-		h1=self.h_center*(1-(dist1**2/self.R**2)) # height functions of the droplets
-		h2=self.h_center*(1-(dist2**2/self.R**2))		
-		h_init=maximum(maximum(h1,h2),self.hp) # Initial height: maximum of h1, h2 and precursor
+		h1=self.h_center*(1-((var("coordinate_x")+1)/self.R)**2) # height functions of the droplets
+		h2=self.h_center*(1-((var("coordinate_x")-1)/self.R)**2)		
+		h_init=h_init=maximum(maximum(h1,h2),self.hp) # Initial height: maximum of h1, h2 and precursor
 		eqs+=InitialCondition(h=h_init) 
 		
 		eqs+=SpatialErrorEstimator(h=1) # refine based on the height field
