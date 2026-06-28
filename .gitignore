@@ -1,4 +1,31 @@
-#ignore all kind of files
-*.*
-#except py files
+**/.DS_Store
+# Python cache
+__pycache__/
+*.pyc
+
+# Simulation output directories
+coalescence/
+coalescence_clean/
+spreading_clean/
+lubrication_clean/
+lubrication/
+sensitivity_hp_*/
+sensitivity_Lx_*/
+sensitivity_N_*/
+sweep_Pe_beta*/
+*_plots/
+*_frames/
+
+# General temp/output folders
+output/
+_pyoomph/
+*.vtu
+*.pvd
+*_log.*
+*.mp4
+
+# also keep these files
 !*.py
+!*.md
+!*.sh
+!check-convergence-*.txt
